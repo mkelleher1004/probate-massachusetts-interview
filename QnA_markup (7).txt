@@ -1,0 +1,337 @@
+Q(1): --- Filing for Probate in Massachusetts --- I would like to start off by saying that I am sorry for your loss. Filing for probate can be a very stressful and hard to understand during such a sensitive time. We want to guide you through this process and hopefully allow you to feel some control surrounding the situation.  
+A: Continue
+	Q(1.1): Are you ready to start answering questions?
+	A: Yes
+		Q(1.1.1): Let's start with questions to find out if you need to file. GOTO:2
+	A: No
+		Q(1.1.2): Come back another time!
+
+
+Q(2): Do you even need to file for probate? In some instances, there is no need to file for probate in Massachusetts, do any of these apply to you?
+A: Continue 
+	Q(2.1): Are you trying to probate a life insurance policy or retirement account?
+	A: Yes
+		Q(2.1.1): Does the life insurance policy have a named beneficiary?
+		A: Yes
+			Q(2.1.1.1): There is no need to probate the assets, they will go directly to the beneficiary. 
+		A: No
+			Q(2.1.1.2): There is a need for probate. GOTO:5
+		A: What's a beneficiary?
+			Q(2.1.1.3): A beneficiary is a person who is named in the policy or on the account to take the benefits or the value of the policy or account.  
+			A: Now that you understand what a trust is, answer the question to the best of your ability.
+			A: Return to the question.
+				Q(2.1.1.3.2): Try answering the question now. GOTO:2.1.1
+
+	A: No
+		Q(2.1.2): Are there any bank accounts or other assets that do not list a beneficiary?
+		A: Yes
+			Q(2.1.2.1): There is a need for probate. GOTO:5
+		A: No
+			Q(2.1.2.2): There is no need to probate the assets, they go to the beneficiary. GOTO:3
+
+Q(3): Is the estate set up in a trust with named beneficiaries?
+A: Yes
+	Q(3.1): There is no need to probate the assets, they go to the beneficiary.
+A: No
+	Q(3.2): May need probate. GOTO:4
+A: What is a trust?
+	Q(3.3): A trust is an arrangement someone makes for a trustee (designated person) to hold the property as its owner for the benefit or good of one or more named people.  
+	A: Now that you understand what a beneficiary is, answer the question to the best of your ability.
+		Q(3.3.1): Let's return to the question. GOTO:3
+
+Q(4): Is any of the property jointly owned with a right of survivorship (where the surviving joint owner is automatically entitled to the property)?
+A: Yes
+	Q(4.1): There is no need for probate, the property passes to the joint owner.
+A: No
+	Q(4.2): May need probate. GOTO:5
+A: What's a joint owner with a right of survivorship?
+	Q(4.3): There is a joint owner if the property lists more than one owner. There is a right of survivorship if one owner dies, the other(s) will automatically own the share of the person who died.
+	A: Now that you understand what a joint owner with a right of survivorship is, answer the question to the best of your ability.
+	A: Return to the question.
+		Q(4.3.2): Let's go back and try answering the question now. GOTO:4
+
+Q(5): Is the estate eligible for probate? There is a general rule that an estate has to be probated within 3 years of the decedent's death.
+A: Continue	
+	Q(5.1): Has it been more than 3 years since the decedent's death?
+	A: Yes
+		Q(5.1.1): Probate is not available to you. End.
+	A: No
+		Q(5.1.2): Probate is available. GOTO:6
+A: What is a 'decedent'?
+	Q(5.2): The decedent is the person who has died. 
+	A: Now that you understand what a decedent is, try answering the question.
+	A: Return to the question.
+		Q(5.2.2): Try answering it now. GOTO:5.1
+
+Q(6): Probate Required: There are some situations where you may be required to file for formal probate. Tell us what situations apply to you.
+A: Start the questions about formal probate.
+	Q(6.1): Is there a will?
+	A: Yes
+		Q(6.1.1): Now we will look at whether or not there are any concerns about the validity of the will.
+		A: Answer the following questions to the best of your knowledge.
+			Q(6.1.1.1): Was the will signed by the person whose will it is?
+			A: Yes
+				Q(6.1.1.1.1): Was the will witnessed and signed by those two witnesses?
+				A: Yes
+					Q(6.1.1.1.1.1): Is there just the one will or more than one?				
+					A: Just one will.
+						Q(6.1.1.1.1.1.1): Looks like there aren't any issues with the wills validity, let's move on.
+						A: Continue.   
+					A: More than one will.
+						Q(6.1.1.1.1.1.2): There is a problem with the validity of the will and the will need to be probated. GOTO:11
+						
+				A: No
+					Q(6.1.1.1.1.2): There is a problem with the validity of the will and the will need to be probated. GOTO:11
+			A: No
+				Q(6.1.1.1.2): There is a problem with the validity of the will and the will need to be probated. GOTO:11
+	A: No 
+		Q(6.1.2): Let's look at the next scenario where probate may be required. GOTO:7
+
+Q(7): Is there any personal property, such as bank accounts, stocks, or bonds, that was solely in the decedent’s name with no other owners?
+A: Yes
+	Q(7.1): The personal property will need to be probated. GOTO:11
+A: No 
+	Q(7.2): Let's look at the next scenario where probate may be required. GOTO:8
+
+Q(8): Does the decedent have any outstanding debt?
+A: Yes
+	Q(8.1): The estate will need to be probated to pay any outstanding debts. GOTO:11
+A: No 
+	Q(8.2): There are just a few more scenarios that require probate, keep going! GOTO:9
+
+Q(9): Do you need to get the medical records of the deceased?
+A: Yes
+	Q(9.1): Probate is required to get those medical records. GOTO:11
+A: No 
+	Q(9.2): Does this next scenario apply to you? GOTO:10
+
+Q(10): Do you need to file and pay the decedent's tax returns?
+A: Yes
+	Q(10.1): Probate is required for this. GOTO:11
+A: No
+	Q(10.2): At this point, I'm unsure if probate is even the right step for you. Since you answered "no" to all of the previous questions, probate is not required for the estate, but it might still be an option.
+	A: Continue to the types of probate and see if one fits your situation best. 
+		Q(10.2.1): Continue to the types of probate. GOTO:11
+	A: End the questionnaire. 
+
+Q(11): It looks like the estate is eligible for probate. Let's find out what type of probate may be available to you. GOTO:12
+
+Q(12): There are certain circumstances that require you to file for "formal probate." Please answer the following questions to see whether or not these circumstances apply to you. GOTO:13
+
+Q(13): If there is a will, is it a copy or the original?
+A: It's a copy.
+	Q(13.1): Formal probate may be required. Would you like more information about filing for formal probate in Massachusetts?
+A: I have the original.
+	Q(13.2): Is the will "handwritten"?
+	A: Yes
+		Q(13.2.1): Formal probate may be required. Would you like more information about filing for formal probate in Massachusetts? GOTO:26
+	A: No
+		Q(13.2.2): Are there any sections or words in the will crossed out?
+		A: Yes
+			Q(13.2.2.1): Formal probate may be required. Would you like more information about filing for formal probate in Massachusetts? GOTO:26
+		A: No
+			Q(13.2.2.2): Are any terms of the will unclear?
+			A: Yes
+				Q(13.2.2.2.1): Formal probate may be required. Would you like more information about filing for formal probate in Massachusetts? GOTO:26
+			A: No
+				Q(13.2.2.2.2): Who is the person filing for probate. GOTO:14
+			A: How do I know if any terms are unclear?
+				Q(13.2.2.2.3): When reading the will, it is clear if you understand what the person wants you to do with their property after their death. 
+				A: Now that you understand whether or not the terms are clear.
+					Q(13.2.2.2.3.1): Try answering the question now. GOTO:13.2.2.2
+
+Q(14): If you are the person who will be filing for probate, are you a creditor or public administrator?
+A: I am a creditor.
+	Q(14.1): Formal probate is required if you are filing as a creditor. Would you like more information about filing for formal probate in Massachusetts? GOTO:26
+A: I am a public administrator.
+	Q(14.2): Formal probate is required if you are filing as a public administrator. Would you like more information about filing for formal probate in Massachusetts? GOTO:26
+A: I am neither a creditor or a public administrator.
+	Q(14.3): It doesn't look like you will be required to file for formal probate, let's see if any of the other types of filing work for you. GOTO:15
+
+Q(15): The next type of probate you may be eligible for is called Voluntary Administration. 
+A: What is voluntary administration?
+	Q(15.1): Voluntary Administration is an easier probate process for an estate with minimal assets and no real estate. GOTO:16
+
+Q(16): Does the probate estate include real estate? (Real estate is any property that is land or buildings.)
+A: Yes
+	Q(16.1): Unfortunately because the probate estate has real property, you are ineligible for voluntary administration. GOTO:18
+A: No 
+	Q(16.2): You may be eligible for voluntary administration, but there are a few more questions to answer before we decide how to file.
+	A: Continue with the rest of the questions.
+		Q(16.2.1): At the time of their death, did the decedent own a motor vehicle in their name?
+		A: Yes
+			Q(16.2.1.1): Did they own more than one motor vehicle?
+			A: They owned multiple motor vehicles.
+				Q(16.2.1.1.1): The estate is not eligible for voluntary administration. Let's see if another type applies. GOTO:18
+			A: The person only owns ONE motor vehicle. 
+				Q(16.2.1.1.2): One more question for voluntary administration. GOTO:17
+		A: No
+			Q(16.2.1.2): GOTO:17
+
+Q(17): At the time of the decedent's death did the total value of the personal property owned by the decedent and subject to distribution exceed $25,000. Excluding the value of one motor vehicle.
+A: The total is more than $25,000.
+	Q(17.1): The estate is not eligible for voluntary administration. Let's see if another type applies. GOTO:18
+A: The total is less than $25,000.
+	Q(17.2): The estate is eligible for voluntary administration. Would you like more information about how to begin filing for voluntary administration? GOTO:28
+A: How do I calculate the total value?
+	Q(17.3): You are going to need to add up all of the persons personal property to see if it adds up to more than $25,000. Personal property is anything owned by the person that is of value and is not real estate. When you do the calculation DO NOT include the value of the one motor vehicle.
+	A: Now calculate the total value of the personal property.
+		Q(17.3.1): When you have the value, please answer the question above. GOTO:17
+
+
+Q(18): The next form of probate you may be eligible for is informal probate. 
+
+Would you like to start with the questions about informal probate?
+A: Yes 
+	Q(18.1): Great, let's continue. GOTO:19
+A: No
+	Q(18.2): We know this is difficult. Come back another time.
+
+Q(19): First let's start with some information about informal probate. Informal probate is a probate process where you would not have to go to court or appear in front of a judge. 
+
+It can be a much faster process, but you have to meet all of the requirements.
+A: Continue
+	Q(19.1): Here's the first question? GOTO:20
+
+Q(20): Do you have the original will?
+A: Yes
+	Q(20.1): Informal probate may be available. Let's keep going with the questions. GOTO:21
+A: No
+	Q(20.2): Informal probate may be available to you, but there are a few different forms you will need to file depending on whether or not the decedent died with a will. Would you like information about the forms you may need to file? GOTO:27
+A: How do I know if it is the original will?  
+	Q(20.3): The original will have been signed by the decedent, two witnesses, a notary, and there will be a notary stamp. Try answering the question now. GOTO:20
+
+Q(21): Do you have the official death certificate?
+A: Yes
+	Q(21.1): Next question. GOTO:22
+A: No
+	Q(21.2): Informal probate is not available to you. You will need to proceed with a formal probate process in Massachusetts. Would you like more information about where to begin with the formal probate process? GOTO:26
+	A: Yes
+	A: Not right now.
+		Q(21.2.2): Come back if things change or you need more information.
+
+Q(22): Do you know who and where all the heirs of the person are and where all of the people named in the will are?
+A: I know where all of the heirs and people named are. 
+	Q(22.1): Next question. GOTO:23
+A: I don't know where the heirs are.
+	Q(22.2): Informal probate is not available to you. You will need to proceed with a formal probate process in Massachusetts. Would you like more information about where to begin with the formal probate process? GOTO:26
+A: I don't know where the people named are. 
+	Q(22.3): Informal probate is not available to you. You will need to proceed with a formal probate process in Massachusetts. Would you like more information about where to begin with the formal probate process? GOTO:26
+A: I don't know where any of them are. 
+	Q(22.4): Informal probate is not available to you. You will need to proceed with a formal probate process in Massachusetts. Would you like more information about where to begin with the formal probate process? GOTO:26
+
+Q(23): Are all of the heirs or people named in the will adults?
+A: All are adults. (All over the age of 18.)
+	Q(23.1): Next question. GOTO:24
+A: There are some people under the age of 18.
+	Q(23.2): Informal probate is not available to you. Since there are people under the age of 18, legal representation is needed to protect the minors involved. You will likely need to proceed with formal probate in Massachusetts. GOTO:26
+ 
+
+Q(24): Are all of the heirs or people named in the will considered to be competent?
+A: Everyone is competent.
+	Q(24.1): One last question. You're almost there. GOTO:25
+A: There is at least one person that is not considered to be competent.
+	Q(24.2): Since there are people who are not considered to be competent, legal representation is needed to protect the more vulnerable people involved. You will likely need to proceed with formal probate in Massachusetts. GOTO:26
+A: How do I know if someone is competent?
+	Q(24.3): A competent individual is someone who has the ability to make rational decisions, participate in legal proceedings, and understand what is happening. Try answering the question now. GOTO:24
+
+Q(25): Is there anyone involved that would object to the filing for probate?
+A: Yes
+	Q(25.1): Informal probate is not available if there are any people involved who do not agree with the filing. In cases where there is a disagreement about how the person's assets are to be shared, formal probate is needed. Would you like more information about where to begin with the formal probate process? GOTO:26
+A: No
+	Q(25.2): It looks like you will be able to file for informal probate. Would you like more information about filing for informal probate?
+	A: Yes
+		Q(25.2.1): Here is some more information. GOTO:27
+	A: No
+		Q(25.2.2): Come back another time if you want information. 
+
+
+FORMAL PROBATE INSTRUCTIONS
+Q(26): Looks like filing for formal probate is your only option. There are two ways to file formal probate, choose the option that applies to you.
+A: The person died with a will.
+	Q(26.1): There are a few forms you will need to fill out in order to file. The first form is a 'Petition for Formal Probate of Will and/or Appointment of Personal Representative'.
+	A[https://courtforms.jud.state.ma.us/publicforms/PFC0015]: Click here for the 'Petition for Formal Probate' form.
+	A[https://www.mass.gov/doc/instructions-for-petition-for-formal-probate-mpc963/download]: Click here for instructions on how to fill out the form above.
+	A: I've finished with that form. What's next?
+		Q(26.1.3): The next form you will need to file is the 'Surviving Spouse, Children, Heirs at Law'. This for is used to identify the people who are entitled to receive property from the person who died.
+		A[https://courtforms.jud.state.ma.us/publicforms/PFC0009]: Click here for the 'Surviving Spouse, Children, Heirs at Law' form.
+		A[https://www.mass.gov/doc/instructions-for-form-mpc-162-surviving-spouse-children-heirs-at-law-mpc-958/download]: Click here for instructions on how to fill out the form above.
+		A: I've finished with that form. What's next?
+			Q(26.1.3.3): The next form is the 'Devisees' form. This is used to identify the people, businesses, charities, or trusts named in the will to receive some of that person's property.
+			A[https://courtforms.jud.state.ma.us/publicforms/PFC0016]: Click here for the 'Devisees' form.
+			A[https://www.mass.gov/doc/instructions-for-form-mpc-163-devisees-mpc-959/download]: Click here for instructions on how to fill out the form above.
+			A: I've finished with that form. What's next?
+				Q(26.1.3.3.3): You will need to obtain the original will, or a statement of what is in the will if it is not the original.
+				A: What's next?
+					Q(26.1.3.3.3.1): Next you will need a certified copy of the death certificate. If the death certificate is not available then an affidavit. 
+					A: What's next? 
+						Q(26.1.3.3.3.1.1): The next form is a 'Citation-Return of Service'. You do not have to look for this form, this will be given to you by the court and then you will fill it out.
+						A: Anything else?
+							Q(26.1.3.3.3.1.1.1): The last form you will need to fill out is the 'Decree and Order of Petition for Formal Adjudication'. This will be filled out after the matter has been heard by a judge.
+							A[https://courtforms.jud.state.ma.us/publicforms/PFC0027]: Click here for the 'Decree and Order of Petition for Formal Adjudication' form. 
+								Q(26.1.3.3.3.1.1.1.1): You have finished all of the forms you will need to file for formal probate with a will in Massachusetts.
+								A[https://www.mass.gov/guides/file-a-formal-probate-for-an-estate]: Click here for the mass.gov website if you have more questions. 
+		
+A: The person died without a will. 
+	Q(26.2): There are a few forms you will need to fill out in order to file. The first form is a 'Petition for Formal Probate of Will and/or Appointment of Personal Representative'.
+	A[https://courtforms.jud.state.ma.us/publicforms/PFC0015]: Click here for the 'Petition for Formal Probate' form.
+	A[https://www.mass.gov/doc/instructions-for-petition-for-formal-probate-mpc963/download]: Click here for instructions on how to fill out the form above.
+	A: I've finished with that form. What's next?
+		Q(26.2.3): The next form you will need to file is the 'Surviving Spouse, Children, Heirs at Law'. This for is used to identify the people who are entitled to receive property from the person who died.
+		A[https://courtforms.jud.state.ma.us/publicforms/PFC0009]: Click here for the 'Surviving Spouse, Children, Heirs at Law' form.
+		A[https://www.mass.gov/doc/instructions-for-form-mpc-162-surviving-spouse-children-heirs-at-law-mpc-958/download]: Click here for instructions on how to fill out the form above.
+		A: I've finished with that form. What's next?
+			Q(26.2.3.3): Next you will need a certified copy of the death certificate. If the death certificate is not available then an affidavit. 
+			A: What's next? 
+				Q(26.2.3.3.1): The next form is a 'Citation-Return of Service'. You do not have to look for this form, this will be given to you by the court and then you will fill it out.
+				A: Anything else?
+					Q(26.2.3.3.1.1): The last form you will need to fill out is the 'Decree and Order of Petition for Formal Adjudication'. This will be filled out after the matter has been heard by a judge.
+					A[https://courtforms.jud.state.ma.us/publicforms/PFC0027]: Click here for the 'Decree and Order of Petition for Formal Adjudication' form. 
+						Q(26.2.3.3.1.1.1): You have finished all of the forms you will need to file for formal probate without a will in Massachusetts.
+						A[https://www.mass.gov/guides/file-a-formal-probate-for-an-estate]: Click here for the mass.gov website if you have more questions. 
+
+
+INFORMAL PROBATE INSTRUCTIONS
+Q(27): Looks like you're able to file for informal probate.
+A: Continue
+	Q(27.1): There are a few forms you will need to fill out in order to file. The first form is a 'Petition for Formal Probate of Will and/or Appointment of Personal Representative'.
+	A[https://courtforms.jud.state.ma.us/publicforms/PFC0015]: Click here for the 'Petition for Formal Probate' form.
+	A[https://www.mass.gov/doc/instructions-for-petition-for-formal-probate-mpc963/download]: Click here for instructions on how to fill out the form above.
+	A: I've finished that form. What's next?
+		Q(27.1.3): The next form you will need to file is the 'Surviving Spouse, Children, Heirs at Law'. This for is used to identify the people who are entitled to receive property from the person who died.
+		A[https://courtforms.jud.state.ma.us/publicforms/PFC0009]: Click here for the 'Surviving Spouse, Children, Heirs at Law' form.
+		A[https://www.mass.gov/doc/instructions-for-form-mpc-162-surviving-spouse-children-heirs-at-law-mpc-958/download]: Click here for instructions on how to fill out the form above.
+		A: I've finished that form. What's next?
+			Q(27.1.3.3): The next form is the 'Devisees' form. This is used to identify the people, businesses, charities, or trusts named in the will to receive some of that person's property.
+			A[https://courtforms.jud.state.ma.us/publicforms/PFC0016]: Click here for the 'Devisees' form.
+			A[https://www.mass.gov/doc/instructions-for-form-mpc-163-devisees-mpc-959/download]: Click here for instructions on how to fill out the form above.
+			A: I've finished with that form. What's next?
+				Q(27.1.3.3.3): Next you will need a certified copy of the death certificate. If the death certificate is not available then an affidavit. 
+				A: What's next?
+					Q(27.1.3.3.3.1): Next you will need to file a 'Notice of Informal Probate and Return Service.'
+					A[https://courtforms.jud.state.ma.us/publicforms/PFC0020]: Click here for the 'Notice of Informal Probate and Return Service' form. 
+					A: What's next?
+						Q(27.1.3.3.3.1.2): Fill out an 'Order for Informal Probate of Will and/or Appointment of Personal Representative.'
+						A[https://courtforms.jud.state.ma.us/publicforms/PFC0026]: Click here for the 'Order for Informal Probate of Will and/or Appointment of Personal Representative' form.
+						A: What's next?
+							Q(27.1.3.3.3.1.2.2): Last is the 'Informal Probate Publication Notice.'
+							A[https://courtforms.jud.state.ma.us/publicforms/PFC0025]: Click here for the 'Informal Probate Publication Notice' form.
+							A[https://www.mass.gov/doc/instructions-to-petitioner-informal-probate-publication-notice-instructions-to-petitioner/download]: Click her for instructions on how to fill out the form.
+								Q(27.1.3.3.3.1.2.2.2): You have finished all of the forms you will need.
+								A[https://www.mass.gov/guides/file-an-informal-probate-for-an-estate]: If you have anymore questions, click here to go to mass.gov. 
+
+
+VOLUNTARY ADMINISTRATION INSTRUCTIONS
+Q(28): Looks like you are eligible to file for voluntary administration.
+A: Continue
+	Q(28.1): The first form you will need to file is a 'Voluntary Administration Statement.'
+	A[https://courtforms.jud.state.ma.us/publicforms/PFC0007]: Click her for the 'Voluntary Administration Statement' form.
+	A[chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.mass.gov/doc/instructions-for-voluntary-administration-with-or-without-a-will-mpc-961/download]: Click here for instructions on how to fill out the form.
+	A: What's next?
+		Q(28.1.3): Next you will need a certified copy of the death certificate. If the death certificate is not available then an affidavit. 
+		A: What's next?
+			Q(28.1.3.1): The final step is to collect the original copy of the will, if any.
+			A: Continue
+				Q(28.1.3.1.1): You have finished everything that is required to file for voluntary administration.
+				A[https://www.mass.gov/guides/file-a-voluntary-administration-for-an-estate]: If you have anymore questions, click here and you will be brought to mass.gov.
+
